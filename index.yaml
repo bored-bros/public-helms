@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  helmless:
+  - apiVersion: v2
+    created: "2024-07-06T19:23:06.928713734Z"
+    description: A place for all the Kubernetes resources which don't already have
+      a home
+    digest: 771a2ec524cd531465ee693cfd1448589be84e4326f21314c2d00552821ecbf1
+    home: https://github.com/ohayak/Helmless
+    kubeVersion: '>=1.16.0-0'
+    name: helmless
+    urls:
+    - https://github.com/bored-brothers/public-helms/releases/download/helmless-1.0.0/helmless-1.0.0.tgz
+    version: 1.0.0
+generated: "2024-07-06T19:23:06.928735024Z"
