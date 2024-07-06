@@ -1,9 +1,11 @@
 {{- $template := fromYaml (include "manifest.resource" .) -}}
+{{- $labels := .Values.labels | default dict -}}
+{{- $annotations := .Values.annotations | default dict -}}
 {{- range .Values.resources }}
 ---
-{{ toYaml (merge . $template) -}}
+{{ toYaml (mergeOverwrite (dict "metadata" (dict "labels" $labels "annotations" $annotations)) (merge . $template)) -}}
 {{- end }}
 {{- range $i, $t := .Values.templates }}
 ---
-{{ toYaml (merge (tpl $t $ | fromYaml) $template) -}}
+{{ toYaml (mergeOverwrite (dict "metadata" (dict "labels" $labels "annotations" $annotations)) (merge (tpl $t $ | fromYaml) $template)) -}}
 {{- end }}
