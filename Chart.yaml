@@ -1,0 +1,6 @@
+apiVersion: v2
+description: A place for all the Kubernetes resources which don't already have a home
+name: helmless
+version: 1.0.0
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/ohayak/Helmless
